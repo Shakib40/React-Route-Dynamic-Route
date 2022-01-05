@@ -11,7 +11,7 @@ import{Users} from './components/User';
 import {UserDetails} from './components/UserDetails';
 
 import {Login} from './components/Login';
-
+import {Register} from './components/Register';
 
 function App() {
   return (
@@ -27,6 +27,7 @@ function App() {
         <Route path="/contactus" element={ <Contact/> }></Route>
 
         <Route path="/login" element={ <Login/> }></Route>
+        <Route path="/register" element={ <Register/> }></Route>
          
         <Route path="/users" element={ <Users/> }></Route>
         <Route path="/users/:usersId" element={ <UserDetails />}></Route>

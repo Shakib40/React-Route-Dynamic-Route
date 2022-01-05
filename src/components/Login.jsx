@@ -1,5 +1,11 @@
 export const Login = () => {
+
     return (
-        <div>Login</div>
+        <div>
+        <form >
+           <input type="text"  name="username" placeholder="Username" />
+           <input value = "submit" type="submit"/>
+        </form>
+        </div>
     )
 };
