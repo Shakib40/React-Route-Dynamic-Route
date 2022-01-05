@@ -1,4 +1,5 @@
 import {useState,useRef} from "react";
+import { Link } from "react-router-dom";
 
 export const Register = () => {
    
@@ -24,7 +25,7 @@ export const Register = () => {
 
     const handleSubmit = (e) => {
       e.preventDefault();
-      console.log(form);      
+    //   console.log(form);      
       
       const payload = {
         username: form.username,
@@ -34,7 +35,6 @@ export const Register = () => {
         department: form.department,
         salary: form.salary,
         status: form.status,
-        status: false,
       };
 
         fetch("http://localhost:3001/users", {
@@ -47,8 +47,8 @@ export const Register = () => {
 
         .then(()=> {
             setForm("");
+            
         });
-
     }
 
     return(

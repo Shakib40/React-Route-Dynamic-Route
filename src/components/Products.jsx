@@ -21,7 +21,7 @@ export const Products = () => {
         <div className="productList">
         {products.map((e , i) =>
             <div>
-                <Link key={i.toString()} to={`/products/${e.id}`}>
+                <Link key={i} to={`/products/${e.id}`}>
                     {e.Name} 
                 </Link>
             </div> 

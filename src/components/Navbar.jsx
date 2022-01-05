@@ -1,8 +1,19 @@
 import {Link} from 'react-router-dom';
 
+import React from 'react';
+import {AuthContext} from '../context/AuthContext';
+
+
 export const Navbar = () => {
-    return (
-        
+    
+    //handleLogin for ContextAPI
+    const {username,isAuth , handleLogin} = React.useContext(AuthContext);
+    
+    const logoutNow = () => {
+        handleLogin(false,"","");
+    }
+
+    return (    
         <div className="Navbar">
 
             <Link to="/">Home</Link>
@@ -15,9 +26,10 @@ export const Navbar = () => {
 
             <Link to="/users">Users</Link>
 
-            <Link to="/login">Login</Link>
-
-            <Link to="/register">Register</Link>
+           { isAuth ?
+                <a onClick={logoutNow}>Logout({username})</a> :
+                <Link to="/login">Login</Link>
+           }    
 
         </div>
         

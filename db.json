@@ -5011,6 +5011,16 @@
       "salary": "4",
       "status": false,
       "id": 1
+    },
+    {
+      "username": "thebad_mahi1",
+      "password": "1111",
+      "age": "23",
+      "address": "asa",
+      "department": "lime",
+      "salary": "4",
+      "status": false,
+      "id": 2
     }
   ]
 }
